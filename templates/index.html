@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | SafeScan</title>
+    <link rel="icon" type="image/x-icon" href="{{url_for('static',filename='images/shield.png')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/icons.css')}}">
+    <script src="{{url_for('static',filename='js/html5-qrcode.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/index.js')}}"></script>
+</head>
+<body>
+    <img class="left-panel" src="{{url_for('static',filename='images/bg-image.png')}}" alt="Logo">
+    <div class="right-panel">
+        <h2>Welcome to SafeScan</h2>
+        <p>This tool verifies UPI IDs & QR codes to determine<br>If a transaction is safe.</p>
+        <div class="container">
+            <form id="upi-form" action="{{url_for('fetchResults')}}" method="POST">
+                <input type="text" name="upi-id" id="upi-id" placeholder="Enter UPI ID">
+                <button class="button" type="submit">Scan <span class="arrow-right"></span></button>
+            </form>
+            <p class="error d-none" id="error-msg">Please Enter Proper ID. Eg: name@bank</p>
+            <div class="qr-scanner" id="qr-scanner"></div>
+        </div>
+    </div>
+</body>
+</html>

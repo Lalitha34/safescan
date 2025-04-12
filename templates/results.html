@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results | SafeScan</title>
+    <link rel="icon" type="image/x-icon" href="{{url_for('static',filename='images/shield.png')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/styles.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/icons.css')}}">
+</head>
+<body>
+    <img class="left-panel" src="{{url_for('static',filename='images/bg-image.png')}}" alt="Logo">
+    <div class="right-panel">
+        <span class="results-icon {{resp.icon}}"></span>
+        {% if resp.state %}
+            <h3>SafeScan marks this UPI as {{resp.message}}<br><br></h3>
+            <p>Make sure you verify and ensure safety before any Transaction <br> Thank you for trusting SafeScan!</p>
+            <a class="a-button" href="{{url_for('home')}}">Go to Home <span class="arrow-right"></span></a>
+            <p class="note">SafeScan is in beta, still learning and evolving — verify wisely.</p>
+        {% else %}
+            <h2 class="h2-mb">{{resp.error}}</h2>
+            <p>{{resp.message}}</p>
+            <a class="a-button" href="{{url_for('home')}}">Go to Home <span class="arrow-right"></span></a>
+        {% endif %}
+    </div>
+</body>
+</html>

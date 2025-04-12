@@ -1,0 +1,37 @@
+.results-icon{
+    display: block;
+    min-height: 100px;
+    margin-bottom: 1rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.arrow-right{
+    background: url("../svg/arrow-right-solid.svg") no-repeat;
+    transition: all 0.2s ease;
+}
+
+.trusted-icon{
+    background-image: url("../svg/trusted-icon.svg");
+}
+
+.warning-icon{
+    background-image: url("../svg/warning-icon.svg");
+}
+
+.fraud-icon{
+    background-image: url("../svg/fraud-icon.svg");
+}
+
+.unknown-icon{
+    background-image: url("../svg/unknown-icon.svg");
+}
+
+.restricted-icon{
+    background-image: url("../svg/restricted-icon.svg");
+}
+
+.error-icon{
+    background-image: url("../svg/error-icon.svg");
+}
