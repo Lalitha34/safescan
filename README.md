@@ -15,8 +15,8 @@ This project ensures secure UPI transactions by verifying recipient legitimacy t
 - Flask
 - HTML/CSS/JavaScript
 
-## Installation Steps
-- You can use any IDE. We highly recommend VS Code
+## Installation Steps for VS code
+- We highly recommend VS Code
 - Install PIP : python -m pip install pip==24.3.1
 - Install Python Virtual Environment : pip install virtualenv
 - Create Virtual Environment : virtualenv env [HERE 'env' is Environment Name]
@@ -32,3 +32,5 @@ This project ensures secure UPI transactions by verifying recipient legitimacy t
 
 ## Libraries Used
     Flask, numpy, pandas, openpyxl, joblib, scikit-learn
+## Website 
+    https://safescan-fwlv.onrender.com
